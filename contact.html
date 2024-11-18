@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/contact.css">
+    <title>3d website with three js</title>
+  </head>
+
+  <body>
+    <header class="navbar itemPosition container">
+      <div class="logo">3D</div>
+      <div class="menu">
+        <a href="index.html" class="menuBtn">Home</a>
+        <a href="about.html" class="menuBtn">About</a>
+        <a href="contact.html" class="menuBtn">Contact</a>
+      </div>
+    </header>
+    
+
+    <h1>Contact!</h1>
+    
+    <div class="contact-form-container">
+     
+
+    <form id="contactForm"  method="POST" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Full Name">
+        <span class="error-message" id="name-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email">
+        <span class="error-message" id="email-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Your Message" rows="5"></textarea>
+        <span class="error-message" id="message-error"></span>
+    </div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
+</div>
+
+   
+
+    <!-- Additional details or footer -->
+    <footer>
+        <p>&copy; 2024 Saraladevi Arun | Contact Form.</p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Orbitron:wght@500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Orbitron', sans-serif; */
+}
+
+:root {
+  --primaryTextColor: #DACEF4;
+  --secondaryTextColor: #f56b4c;
+
+}
+
+body,
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Cutive Mono', monospace;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  background: #331d5d;
+  user-select: none;
+}
+
+/* Universal classes starts */
+.container {
+  width: 100%;
+}
+
+.itemPosition {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* Universal classes ends */
+
+/* Header starts*/
+.navbar {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+  font-size: 2.5rem;
+    color:var(--secondaryTextColor);
+  }
+  
+  .menu {
+    text-decoration: none;
+  
+  }
+  
+  .menuBtn {
+    text-decoration: none;
+    color: var(--primaryTextColor);
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+  
+  .menuBtn:hover {
+    color: var(--secondaryTextColor);
+  }
+
+
+
+
+
+
+/*
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background: #adadb5; /* light background color */ /*}*/
+
+header {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 46px;
+  color: #beb6b6;
+  margin-bottom: 20px;
+}
+
+.contact-form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+
+
+footer {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 24px;
+}
