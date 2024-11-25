@@ -10,6 +10,7 @@
   </head>
 
   <body>
+   
     <header class="navbar itemPosition container">
       <div class="logo">3D</div>
       <div class="menu">
@@ -31,7 +32,55 @@
     <canvas id="canvas"></canvas>
     
 
-    <script type="module" src="./src/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
+    <script>
+        // Create the scene
+        const scene = new THREE.Scene();
+
+        // Create the camera (Field of View, Aspect Ratio, Near Clipping Plane, Far Clipping Plane)
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
+
+        // Create the renderer and add it to the DOM
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create a cube (geometry and material)
+        const geometry = new THREE.BoxGeometry(3, 3, 3);
+        const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        // Add a light source
+        const light = new THREE.PointLight(0xffffff, 1, 100);
+        light.position.set(10, 10, 10);
+        scene.add(light);
+
+        // Handle window resizing
+        window.addEventListener('resize', () => {
+            // Update camera aspect ratio and renderer size
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // The animation function
+        function animate() {
+            // Rotate the cube
+            cube.rotation.x += 0.02;
+            cube.rotation.y += 0.02;
+
+            // Render the scene from the perspective of the camera
+            renderer.render(scene, camera);
+
+            // Call animate() again for the next frame
+            requestAnimationFrame(animate);
+        }
+
+        // Start the animation loop
+        animate();
+    </script>
   </body>
 
 </html>

@@ -1,14 +1,15 @@
+// contact.js
 
-
+// Function to validate the form
 function validateForm(e) {
-    e.preventDefault();  // Prevent form submission
+    e.preventDefault();  // Prevent form submission if validation fails
     let isValid = true;
-    
+
     // Clear previous error messages
     document.getElementById('name-error').style.display = 'none';
     document.getElementById('email-error').style.display = 'none';
     document.getElementById('message-error').style.display = 'none';
-    
+
     // Validate Name
     const name = document.getElementById('name').value.trim();
     if (name === "") {
@@ -34,7 +35,13 @@ function validateForm(e) {
         isValid = false;
     }
 
-    return isValid;  // Prevent form submission if validation fails
-    
+    // If validation is successful, simulate form submission (this can be replaced with actual form submission logic)
+    if (isValid) {
+        // Simulate a successful form submission
+        alert("Form submitted successfully!");
+        // You can uncomment the next line to actually submit the form if necessary
+        // document.getElementById('contactForm').submit();
+    }
 
+    return isValid;  // Prevent form submission if validation fails
 }
