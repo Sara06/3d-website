@@ -1,4 +1,5 @@
 // contact.js
+import '../styles/contact.css';
 
 // Function to validate the form
 function validateForm(e) {

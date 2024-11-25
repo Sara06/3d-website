@@ -1,5 +1,5 @@
 import * as THREE from "three"//Imports the core Three.js library to handle 3D graphics.
-import './style.css' //stylesheet used for custom styles for canvas and body
+import './styles/index.css' //stylesheet used for custom styles for canvas and body
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls" //A Three.js helper for adding mouse-based controls (rotate, zoom, pan) for 3D scenes.
 import gsap from "gsap"; //animation library for moving object
 import { Scene } from "three"; //A scene is like a container for all the 3D objects
